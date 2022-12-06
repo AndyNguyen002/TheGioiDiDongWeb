@@ -167,7 +167,7 @@ ul a {
     width: 100%;
     max-width: 1200px;
     /* background-color: lightgreen; */
-    height: 4400px;
+    height: auto;
 }
 
 .eventList {
@@ -204,6 +204,7 @@ ul a {
     flex-direction: column;
     align-items: center;
     background-color: #f3f3f3;
+    
 }
 
     .Content a:hover {

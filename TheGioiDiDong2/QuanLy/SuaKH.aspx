@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="QLVivoWeekThem.aspx.cs" Inherits="TheGioiDiDong2.QuanLy.QLVivoWeekThem" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SuaKH.aspx.cs" Inherits="TheGioiDiDong2.QuanLy.SuaKH" %>
 
 <!DOCTYPE html>
 
@@ -29,48 +28,84 @@
         }
         .Container{
             margin-top:100px;
+            
         }
         body{
             display:flex;
             justify-content:center;
             align-items:center;
-            background-image:url(../Theme/backgrounglogin.jpg);
+            background-color:lightgray;
         }
+        .DImg{
+            width:80px;
+            height:100px
+        }
+        
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="Container">
-            <h2 style="text-align:center; color:white">Nhập thông tin sản phẩm <%Response.Write(Session["UserID"]); %></h2>
+            
+            <h2 style="text-align:center; color:black">Nhập thông tin </h2>
 
             <div>
             <div>
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2">
-                        <asp:Label ID="Label2" runat="server" Text="Tên sản phẩm: " ForeColor="White"></asp:Label>
-                    </td>
+                        UserID:</td>
                     <td class="auto-style3">
-                        <asp:TextBox ID="tbTenSP" runat="server" Width="195px"></asp:TextBox>
+                        <asp:TextBox ID="tbUserID" runat="server" Width="195px" Enabled="False"></asp:TextBox>
                     </td>
+                    <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2">
-                        <asp:Label ID="Label4" runat="server" Text="Giá bán: " ForeColor="White"></asp:Label>
-                    </td>
+                        Tài khoản:</td>
                     <td class="auto-style3">
-                        <asp:TextBox ID="tbGiaBan" runat="server" Width="195px"></asp:TextBox>
+                        <asp:TextBox ID="tbTaiKhoan" runat="server" Width="195px"></asp:TextBox>
                     </td>
+                    <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2">
-                        <asp:Label ID="Label5" runat="server" Text="Ảnh: " ForeColor="White"></asp:Label>
-                    </td>
+                        Mật khẩu:</td>
                     <td class="auto-style3">
-                        <asp:FileUpload ID="UpAnh" runat="server" />
+                        <asp:TextBox ID="tbMatKhau" runat="server" Width="195px"></asp:TextBox>
                     </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    
+                    <td class="auto-style2">
+                        Họ và tên:</td>
+                    
+                    <td class="auto-style3">
+                        <asp:TextBox ID="tbFullName" runat="server" Width="193px"></asp:TextBox>
+                    </td>
+                    <td>
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+                        &nbsp;</td>
+                    <td class="auto-style3">
+                        &nbsp;</td>
+
+                    <td class="auto-style3">
+                        &nbsp;</td>
+
+                    <td class="auto-style3">
+                        &nbsp;</td>
+
+                    <td class="auto-style3">
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 
@@ -79,17 +114,20 @@
                     <td class="auto-style4"></td>
                     <td class="auto-style5"></td>
                     <td class="auto-style6"></td>
+                    <td class="auto-style6">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style3">
-                        <asp:Button ID="bSua" runat="server"  Text="Thêm dữ liệu" OnClick="bSua_Click" />
+                        <asp:Button ID="bSua" runat="server"  Text="Sửa" OnClick="bSua_Click" />
                     </td>
+                    <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style3">&nbsp;</td>
+                    <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
             </table>

@@ -16,7 +16,7 @@ namespace TheGioiDiDong2.Dao
             //Lấy thông tin chuỗi kết nối từ Web.config
             string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
             //Viết câu lệnh truy vấn
-            string strSQL = "SELECT ID, TenSP, GiaNhap, GiaBan, Anh FROM SanPham2";
+            string strSQL = "SELECT ID, TenSP, GiaBan, Anh FROM SanPham2";
             //Định nghĩa đối tượng Connection
             using (SqlConnection sqlConnection = new SqlConnection(strConnection))
             {
@@ -51,7 +51,7 @@ namespace TheGioiDiDong2.Dao
             //Lấy thông tin chuỗi kết nối từ Web.config
             string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
             //Viết câu lệnh truy vấn
-            string strSQL = "SELECT top 5 ID, TenSP, GiaNhap, GiaBan, Anh FROM SanPham2 order by ID asc";
+            string strSQL = "SELECT top 5 ID, TenSP, GiaBan, Anh FROM SanPham2 order by ID asc";
             //Định nghĩa đối tượng Connection
             using (SqlConnection sqlConnection = new SqlConnection(strConnection))
             {
@@ -86,7 +86,7 @@ namespace TheGioiDiDong2.Dao
             //Lấy thông tin chuỗi kết nối từ Web.config
             string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
             //Viết câu lệnh truy vấn
-            string strSQL = "SELECT top 5 ID, TenSP, GiaNhap, GiaBan, Anh FROM SanPham2 order by ID desc";
+            string strSQL = "SELECT top 5 ID, TenSP, GiaBan, Anh FROM SanPham2 order by ID desc";
             //Định nghĩa đối tượng Connection
             using (SqlConnection sqlConnection = new SqlConnection(strConnection))
             {

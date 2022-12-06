@@ -35,20 +35,13 @@ namespace TheGioiDiDong2
         {
 
             SanPham sp = Dao.DaoSanPham.getOne(pID);
-            VivoWeek sp2 = Dao.DaoVivoWeek.getOne(pID);
-            if (sp != null)
-            {
+            
+            
                 lbTenSP.Text = sp.TenSP;
                 lbTenSP2.Text = sp.TenSP;
                 lbGia.Text = Convert.ToString(sp.Giaban);
-            }
-            
-            else
-            {
-                lbTenSP.Text = sp2.TenSP;
-                lbTenSP2.Text = sp2.TenSP;
-                lbGia.Text = Convert.ToString(sp2.Giaban);
-            }
+                preview.ImageUrl = "~/SqlLoadimg/" + sp.AnhPreview1;
+                Image1.ImageUrl = "~/SqlLoadimg/" + sp.AnhPreview2;
 
         }
         protected void bQly_Click(object sender, EventArgs e)

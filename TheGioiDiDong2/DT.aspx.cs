@@ -31,6 +31,17 @@ namespace TheGioiDiDong2.Web.DienThoai
             dtlAll.DataSource = lst;
             DataBind();
         }
+        protected void GioHang_Click(object sender, EventArgs e)
+        {
+            if (Session["UserID"] == null)
+            {
+                Response.Redirect("DangNhap.aspx");
+            }
+            else
+            {
+                Response.Redirect("GioHang.aspx");
+            }
+        }
         protected void bDienThoai_Click(object sender, EventArgs e)
         {
             

@@ -27,12 +27,14 @@ namespace TheGioiDiDong2.QuanLy
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 SqlCommand cmd = new SqlCommand(
-                    "insert into SanPham2 ( TenSP, GiaBan, Anh) values ( @TenSP,  @GiaBan, @Anh)", conn);
+                    "insert into SanPham2 ( TenSP, GiaBan, Anh, AnhPreview1, AnhPreview2) values ( @TenSP,  @GiaBan, @Anh, @AnhPreview1, @AnhPreview2)", conn);
                 conn.Open();
                 
                 cmd.Parameters.AddWithValue("@TenSP", tbTenSP.Text);
                 cmd.Parameters.AddWithValue("@GiaBan", tbGiaBan.Text);
                 cmd.Parameters.AddWithValue("@Anh", UpAnh.FileName);
+                cmd.Parameters.AddWithValue("@AnhPreview1", UpAnh0.FileName);
+                cmd.Parameters.AddWithValue("@AnhPreview2", UpAnh1.FileName);
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 Response.Redirect("../QuanLySanPham.aspx");

@@ -67,7 +67,7 @@ namespace TheGioiDiDong2
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             GridView1.PageIndex = e.NewPageIndex;
-            List<SanPham> listSV = DaoSanPham.getAll();
+            List<BannerSlide> listSV = DaoBannerSlide.getAll();
             GridView1.DataSource = listSV;
             GridView1.DataBind();
         }
@@ -78,6 +78,14 @@ namespace TheGioiDiDong2
             //GridView1.DataSource = sSP;
             //GridView1.DataBind();
 
+        }
+
+        protected void bLogOut_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Response.Cookies.Clear();
+            Response.Redirect("DangNhap.aspx");
         }
     }
 }

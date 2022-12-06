@@ -78,6 +78,24 @@ namespace TheGioiDiDong2.QuanLy
         protected global::System.Web.UI.WebControls.FileUpload UpAnh;
 
         /// <summary>
+        /// UpAnh0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload UpAnh0;
+
+        /// <summary>
+        /// UpAnh1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload UpAnh1;
+
+        /// <summary>
         /// bSua control.
         /// </summary>
         /// <remarks>

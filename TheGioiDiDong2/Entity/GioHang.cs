@@ -14,5 +14,6 @@ namespace TheGioiDiDong2.Entity
         public int GiaBan { get; set; }
         public string Anh { get; set; }
         public int SoLuong { get; set; }
+        public string TongTien { get; set; }
     }
 }

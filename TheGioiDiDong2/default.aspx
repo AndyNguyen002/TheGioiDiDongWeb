@@ -77,7 +77,7 @@
         <!--TopHeader  -->
         <div class="TopHeader">
           <div class="THContent">
-            <a href="default.html">
+            <a href="default.apsx">
               <div class="logoImage">
                 <img src="../../Icon/LogoTheGioiDiDong.png" alt="" />
               </div>
@@ -109,7 +109,7 @@
               </div>
             <!--  -->
               <a href="../../QuanLy/QlyNguoiDung.aspx">
-                  <div class="otherChoice" style="">
+                  <div class="otherChoice" >
                <asp:LinkButton OnClick="bQly_Click" ID="bQly" runat="server">
                    <asp:Label ID="lbSession" runat="server" Text="Đăng nhập"></asp:Label>
 
@@ -198,6 +198,7 @@
               <a href="#"><li>Máy cũ giá rẻ</li></a>
               <a href="#"><li>Sim, thẻ cào</li></a>
               <a href="#"><li>Dịch vụ tiện ích</li></a>
+                <a href="#"><li>Hotline</li></a>
             </ul>
           </div>
         </div>
@@ -214,7 +215,7 @@
         <!-- end big banner -->
 
         <!-- main-container -->
-        <div class="main-container">
+        <div class="main-container" style="margin-bottom:">
           <div class="sliderF">
               <div
                   id="carouselExampleControls"
@@ -617,7 +618,7 @@
             </div>
           </div>
           <!-- end dich vu tien ich -->
-
+            <div class="DichVu">hotline</div>
             <%-- Recommend product --%>
           
               <asp:DataList ID="dtlRecommend" runat="server" DataKeyField="ID"  RepeatDirection="Horizontal" RepeatColumns="5">

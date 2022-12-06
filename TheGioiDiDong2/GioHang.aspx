@@ -6,7 +6,9 @@
 <head runat="server">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="GioHang.css">
-    <title></title>
+    
+    <link rel="Icon" href="../../Icon/iconWeb.png"/>
+    <title>Giỏ hàng</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -15,7 +17,7 @@
         <!--TopHeader  -->
         <div class="TopHeader">
           <div class="THContent">
-            <a href="default.html">
+            <a href="default.apsx">
               <div class="logoImage">
                 <img src="../../Icon/LogoTheGioiDiDong.png" alt="" />
               </div>
@@ -146,7 +148,7 @@
       <div class="contai">
         <div class="contentt" ">
                
-                <asp:DataList ID="dtlDetaiBuy" runat="server">
+                <asp:DataList ID="dtlDetaiBuy"  runat="server">
                     <ItemTemplate>
                         <div class="detaiBuy">
                             <div class="DBleft">
@@ -156,7 +158,7 @@
                                 <asp:Label ID="Label1" CssClass="TenSP" runat="server" Text='<%# Eval("TenSP") %>'></asp:Label>
                             </div>
                             <div class="DBright" >
-                                <asp:Label ID="Label2" CssClass="Price" Height="5px" runat="server" Text='<%#Eval("GiaBan") %>'></asp:Label>
+                                <asp:Label ID="Label2" CssClass="Price" Height="5px" runat="server" Text='<%#Eval("GiaBan")%>'></asp:Label>
 
                                 
                             </div>
@@ -164,10 +166,11 @@
                 </asp:DataList>
             <div class="Pfinal">
                 <span style="margin-left: 20px;font-size: 14px;">Tổng tiền:</span>
-                <div class="finalPrice">190238</div>
+                <asp:Label ID="Label3" runat="server" CssClass="finalPrice"  Text=""></asp:Label>
+                <asp:Label ID="TongTien" runat="server" ></asp:Label>
             </div>
             <div class="DatHang">
-                <asp:Button ID="bDatHang" runat="server" Text="Đặt hàng" CssClass="button" />
+                <asp:Button ID="bDatHang" runat="server" Text="Đặt hàng" CssClass="button" OnClick="bDatHang_Click" />
             </div>
         </div>
       </div>

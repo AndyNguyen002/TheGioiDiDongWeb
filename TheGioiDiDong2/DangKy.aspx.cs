@@ -24,11 +24,12 @@ namespace TheGioiDiDong2.Web.DangKy
                 using (SqlConnection conn = new SqlConnection(strConnection))
                 {
                     SqlCommand cmd = new SqlCommand
-                        ("insert into [NguoiDung] (TaiKhoan, MatKhau, FullName) values (@TaiKhoan, @MatKhau, @FullName)", conn);
+                        ("insert into [NguoiDung] (TaiKhoan, MatKhau, FullName, IDVaiTro) values (@TaiKhoan, @MatKhau, @FullName,@IDVaiTro)", conn);
                     conn.Open();
                     cmd.Parameters.AddWithValue("@TaiKhoan", tbTaiKhoan.Text);
                     cmd.Parameters.AddWithValue("@MatKhau", tbMatKhau.Text);
                     cmd.Parameters.AddWithValue("@FullName", tbFullName.Text);
+                    cmd.Parameters.AddWithValue("@IDVaiTro", 1);
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     Response.Redirect("DangNhap.aspx");

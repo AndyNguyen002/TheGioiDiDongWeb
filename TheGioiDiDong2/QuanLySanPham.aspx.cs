@@ -23,7 +23,7 @@ namespace TheGioiDiDong2
                 GridView1.DataBind();
 
             }
-            if (Session["UserID"] == null)
+            if (Session["UserID"] == null && (int)Session["IDVaiTro"] != 2)
             {
                 Response.Redirect("DangNhap.aspx");
             }
@@ -43,7 +43,7 @@ namespace TheGioiDiDong2
             int index = Convert.ToInt32(e.RowIndex);
             int ID = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
 
-            string strSql = "Delete from SanPham where  ID = " + ID.ToString();
+            string strSql = "Delete from SanPham2 where  ID = " + ID.ToString();
             string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
 
             using (SqlConnection sqlConnection = new SqlConnection(strConnection))
@@ -79,6 +79,14 @@ namespace TheGioiDiDong2
             GridView1.DataSource = sSP;
             GridView1.DataBind();
 
+        }
+
+        protected void bLogOut_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Response.Cookies.Clear();
+            Response.Redirect("DangNhap.aspx");
         }
     }
 }

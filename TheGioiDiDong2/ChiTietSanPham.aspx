@@ -6,11 +6,13 @@
 <head runat="server">
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="ChiTietSanPham.css" />
+    
+    <link rel="Icon" href="../../Icon/iconWeb.png"/>
     <link
     rel="stylesheet"
     href="../../bootstrap-4.6.2-dist/css/bootstrap.min.css"
   />
-    <title></title>
+    <title>Chi tiết sản phẩm</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -20,7 +22,7 @@
         <!--TopHeader  -->
         <div class="TopHeader">
           <div class="THContent">
-            <a href="default.html">
+            <a href="default.apsx">
               <div class="logoImage">
                 <img src="../../Icon/LogoTheGioiDiDong.png" alt="" />
               </div>
@@ -150,26 +152,16 @@
             <div class="Content">
         <div class="nameTag">
             <h1>Điện thoại <asp:Label ID="lbTenSP2" runat="server" Text=""></asp:Label></h1>
-            <%Response.Write(Session["FullName"]);%>
         </div>
         <div class="Product">
             <div class="infoP">
               <div class="imgP carousel slide" data-ride="carousel" id="imgP">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                      <img src="../../Slider/productShow/vivo1.jpg" alt="">
+                      <asp:Image  ID="preview" Width="690px" Height="385px" runat="server"  />                     
                   </div>
-                  <div class="carousel-item">
-                    <img src="../../Slider/productShow/vivo2.jpg" alt="">
-                  </div>
-                  <div class="carousel-item">
-                      <img src="../../Slider/productShow/vivo3.jpg" alt="">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../../Slider/productShow/vivo4.jpg" alt="">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../../Slider/productShow/vivo5.jpg" alt="">
+                    <div class="carousel-item ">
+                      <asp:Image  ID="Image1"  Width="690px" Height="385px" runat="server"  />                     
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-target="#imgP" data-slide="prev">

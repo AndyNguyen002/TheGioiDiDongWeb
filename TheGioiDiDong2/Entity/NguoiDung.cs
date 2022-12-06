@@ -11,6 +11,6 @@ namespace TheGioiDiDong2.Entity
         public string TaiKhoan { get; set; }
         public string  MatKhau { get; set; }
         public string FullName { get; set; }
-
+        public int IDVaiTro { get; set; }
     }
 }

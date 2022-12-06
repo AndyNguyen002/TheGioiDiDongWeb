@@ -6,9 +6,11 @@
 <head runat="server">
     <link rel="stylesheet" href="DangKy.css" />
     <link rel="stylesheet" href="../DangNhap/main.css" />
-    <title></title>
+    
+    <link rel="Icon" href="../../Icon/iconWeb.png"/>
+    <title>Đăng ký</title>
 </head>
-<body>
+<body style="display:flex; justify-content:center">
     <form id="form1" runat="server">
         
             <div class="container">

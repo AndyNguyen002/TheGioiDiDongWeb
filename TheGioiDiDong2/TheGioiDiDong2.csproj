@@ -200,14 +200,13 @@
     <Content Include="Picture\Banner2.png" />
     <Content Include="Picture\Bigbanner.png" />
     <Content Include="QLBannerSlide.aspx" />
-    <Content Include="QLVivoWeek.aspx" />
+    <Content Include="QuanLyKH.aspx" />
     <Content Include="QuanLySanPham.aspx" />
     <Content Include="QuanLySanPham.css" />
     <Content Include="QuanLy\BannerSlideSua.aspx" />
     <Content Include="QuanLy\BannerSlideThem.aspx" />
-    <Content Include="QuanLy\QLVivoWeekSua.aspx" />
-    <Content Include="QuanLy\QLVivoWeekThem.aspx" />
     <Content Include="QuanLy\QlySanPham.aspx" />
+    <Content Include="QuanLy\SuaKH.aspx" />
     <Content Include="QuanLy\SuaSP.aspx" />
     <Content Include="QuanLy\ThemSP.aspx" />
     <Content Include="Slider\6A2C6077-4BB0-4CC2-9103-031401E5D41F-720x220.png" />
@@ -234,16 +233,37 @@
     <Content Include="Slider\VivoWeek\3.png" />
     <Content Include="Slider\VivoWeek\4.png" />
     <Content Include="Slider\VivoWeek\5.png" />
+    <Content Include="SqlLoadimg\13.jpg" />
+    <Content Include="SqlLoadimg\13pro.jpg" />
+    <Content Include="SqlLoadimg\14.jpg" />
+    <Content Include="SqlLoadimg\14plus.jpg" />
+    <Content Include="SqlLoadimg\ip11.jpg" />
     <Content Include="SqlLoadimg\iphone11.jpg" />
     <Content Include="SqlLoadimg\iphone12.jpg" />
+    <Content Include="SqlLoadimg\iphone14.jpg" />
+    <Content Include="SqlLoadimg\note11.jpeg" />
     <Content Include="SqlLoadimg\oppo-reno8.jpg" />
+    <Content Include="SqlLoadimg\s22.jpg" />
+    <Content Include="SqlLoadimg\s225g.jpg" />
     <Content Include="SqlLoadimg\samsung-a23.jpg" />
     <Content Include="SqlLoadimg\samsung-a53.jpg" />
     <Content Include="SqlLoadimg\samsung-a73.jpg" />
+    <Content Include="SqlLoadimg\samsungz.jpg" />
     <Content Include="SqlLoadimg\SliderF\anh1.png" />
     <Content Include="SqlLoadimg\SliderF\anh2.png" />
     <Content Include="SqlLoadimg\SliderF\anh3.png" />
     <Content Include="SqlLoadimg\SliderF\anh4.png" />
+    <Content Include="SqlLoadimg\vivo-v23.jpg" />
+    <Content Include="SqlLoadimg\vivo-v25.jpg" />
+    <Content Include="SqlLoadimg\vivo-y15.jpg" />
+    <Content Include="SqlLoadimg\vivo-y15s.jpg" />
+    <Content Include="SqlLoadimg\vivo-y16.jpg" />
+    <Content Include="SqlLoadimg\vivo-y21.jpg" />
+    <Content Include="SqlLoadimg\vivo-y21s.jpg" />
+    <Content Include="SqlLoadimg\vivo-y22.jpg" />
+    <Content Include="SqlLoadimg\vivo-y26s.jpg" />
+    <Content Include="SqlLoadimg\Vivo-y33s.jpg" />
+    <Content Include="SqlLoadimg\xr11s.jpg" />
     <Content Include="Theme\backgrounglogin.jpg" />
     <Content Include="Web.config" />
     <Content Include="DangKy.aspx" />
@@ -256,7 +276,6 @@
     <Content Include="SqlDT.css" />
     <Content Include="default.aspx" />
     <Content Include="main.css" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChiTietSanPham.aspx.cs">
@@ -293,12 +312,12 @@
     <Compile Include="QLBannerSlide.aspx.designer.cs">
       <DependentUpon>QLBannerSlide.aspx</DependentUpon>
     </Compile>
-    <Compile Include="QLVivoWeek.aspx.cs">
-      <DependentUpon>QLVivoWeek.aspx</DependentUpon>
+    <Compile Include="QuanLyKH.aspx.cs">
+      <DependentUpon>QuanLyKH.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="QLVivoWeek.aspx.designer.cs">
-      <DependentUpon>QLVivoWeek.aspx</DependentUpon>
+    <Compile Include="QuanLyKH.aspx.designer.cs">
+      <DependentUpon>QuanLyKH.aspx</DependentUpon>
     </Compile>
     <Compile Include="QuanLySanPham.aspx.cs">
       <DependentUpon>QuanLySanPham.aspx</DependentUpon>
@@ -321,26 +340,19 @@
     <Compile Include="QuanLy\BannerSlideThem.aspx.designer.cs">
       <DependentUpon>BannerSlideThem.aspx</DependentUpon>
     </Compile>
-    <Compile Include="QuanLy\QLVivoWeekSua.aspx.cs">
-      <DependentUpon>QLVivoWeekSua.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="QuanLy\QLVivoWeekSua.aspx.designer.cs">
-      <DependentUpon>QLVivoWeekSua.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLy\QLVivoWeekThem.aspx.cs">
-      <DependentUpon>QLVivoWeekThem.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="QuanLy\QLVivoWeekThem.aspx.designer.cs">
-      <DependentUpon>QLVivoWeekThem.aspx</DependentUpon>
-    </Compile>
     <Compile Include="QuanLy\QlySanPham.aspx.cs">
       <DependentUpon>QlySanPham.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="QuanLy\QlySanPham.aspx.designer.cs">
       <DependentUpon>QlySanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy\SuaKH.aspx.cs">
+      <DependentUpon>SuaKH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanLy\SuaKH.aspx.designer.cs">
+      <DependentUpon>SuaKH.aspx</DependentUpon>
     </Compile>
     <Compile Include="QuanLy\SuaSP.aspx.cs">
       <DependentUpon>SuaSP.aspx</DependentUpon>
@@ -384,20 +396,6 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Header.Master.cs">
-      <DependentUpon>Header.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Header.Master.designer.cs">
-      <DependentUpon>Header.Master</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="bootstrap-4.6.2-dist\css\bootstrap-grid.css.map" />
@@ -412,7 +410,6 @@
     <Content Include="bootstrap-4.6.2-dist\js\bootstrap.min.js.map" />
     <Content Include="ChiTiet\New shortcut.lnk" />
     <None Include="packages.config" />
-    <Content Include="Header.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

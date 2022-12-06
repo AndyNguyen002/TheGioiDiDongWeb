@@ -10,6 +10,33 @@ namespace TheGioiDiDong2.Dao
 {
     public class DaoGiohang
     {
+        public static GioHang TongTien(int _userid)
+        {
+            GioHang objND = null;
+
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+
+            string sql = "select  UserID, SUM(GiaBan * SoLuong) as TongTien from SanPham2, GioHang where GioHang.IDProduct = SanPham2.ID and UserID = '"+_userid+"' group by UserID";
+
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                SqlCommand sqlCommand = new SqlCommand(sql, conn);
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+
+                conn.Open();
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    objND = new GioHang();
+                    objND.TongTien = Convert.ToString(reader["TongTien"]);
+                }
+                reader.Close();//Đóng đối tượng DataReader
+                conn.Close();//Đóng kết nối
+                conn.Dispose();//Giải phóng bộ nhớ
+                return objND;
+            }
+        }
         public static List<GioHang> getAll(int _userid)
         {
             List<GioHang> lstND = new List<GioHang>();

@@ -23,10 +23,10 @@ namespace TheGioiDiDong2.QuanLy
             
             //Response.End();
             tbID.Text = pID.ToString();
-            if (Session["UserID"] == null)
-            {
-                Response.Redirect("../DangNhap.aspx");
-            }
+            //if (Session["UserID"] == null)
+            //{
+            //    Response.Redirect("../DangNhap.aspx");
+            //}
 
         }
         private void BindData(string pID)
@@ -37,6 +37,9 @@ namespace TheGioiDiDong2.QuanLy
             tbTenSP.Text = Convert.ToString(sp.TenSP);
             //ImageUrl = '<%# "../../SqlLoadimg/" + Eval("Anh") %>'
             imgpr.ImageUrl = "../../SqlLoadimg/" + Convert.ToString(sp.Anh);
+            imgpr2.ImageUrl = "../../SqlLoadimg/" + Convert.ToString(sp.AnhPreview1);
+            imgpr3.ImageUrl = "../../SqlLoadimg/" + Convert.ToString(sp.AnhPreview2);
+            
 
         }
         protected void bSua_Click(object sender, EventArgs e)
@@ -45,15 +48,18 @@ namespace TheGioiDiDong2.QuanLy
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 SqlCommand cmd = new SqlCommand
-                    ("update SanPham2 set TenSP = @TenSP, GiaBan = @GiaBan, Anh= @Anh where ID = @ID", conn);
+                    ("update SanPham2 set TenSP = @TenSP, GiaBan = @GiaBan, Anh= @Anh, AnhPreview1 = @PV1, AnhPreview2 = @PV2 where ID = @ID", conn);
                 conn.Open();
                 cmd.Parameters.AddWithValue("@ID", tbID.Text);
                 cmd.Parameters.AddWithValue("@TenSP", tbTenSP.Text);
                 cmd.Parameters.AddWithValue("@GiaBan", tbGiaBan.Text);
-                cmd.Parameters.AddWithValue("@Anh", UpAnh.FileName);
+                cmd.Parameters.AddWithValue("@Anh", UpAnh1.FileName);
+                cmd.Parameters.AddWithValue("@PV1", UpAnh2.FileName);
+                cmd.Parameters.AddWithValue("@PV2", UpAnh3.FileName);
+                
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                Response.Redirect("../QuanLySanPham");
+                Response.Redirect("../QuanLySanPham.aspx");
             }
         }
     }

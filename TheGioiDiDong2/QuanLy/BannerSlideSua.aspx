@@ -35,7 +35,7 @@
             display:flex;
             justify-content:center;
             align-items:center;
-            background-image:url(../Theme/backgrounglogin.jpg);
+            background-color:lightgray;
         }
         .DImg{
             width:80px;
@@ -47,36 +47,18 @@
     <form id="form1" runat="server">
         <div class="Container">
             
-            <h2 style="text-align:center; color:white">Xin chào <%Response.Write(Session["FullName"]); %></h2>
-            <h2 style="text-align:center; color:white">Nhập thông tin người dùng ID:SP <%Response.Write(Session["ID"]); %></h2>
+            <h2 style="text-align:center; color:black">Sửa ảnh</h2>
 
             <div>
             <div>
             <table class="auto-style1">
+                
                 <tr>
                     <td class="auto-style2">
-                        <asp:Label ID="Label1" runat="server" Text="ID:" ForeColor="White"></asp:Label>
+                        <asp:Label ID="Label4" runat="server" Text="ID: " ForeColor="White"></asp:Label>
                     </td>
                     <td class="auto-style3">
-                        <asp:TextBox ID="tbID" runat="server" Width="195px" Enabled="False"></asp:TextBox>
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">
-                        <asp:Label ID="Label2" runat="server" Text="Tên sản phẩm: " ForeColor="White"></asp:Label>
-                    </td>
-                    <td class="auto-style3">
-                        <asp:TextBox ID="tbTenSP" runat="server" Width="195px"></asp:TextBox>
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">
-                        <asp:Label ID="Label4" runat="server" Text="Giá bán: " ForeColor="White"></asp:Label>
-                    </td>
-                    <td class="auto-style3">
-                        <asp:TextBox ID="tbGiaBan" runat="server" Width="195px"></asp:TextBox>
+                        <asp:TextBox ID="tbID" runat="server" Width="195px" Enabled="False" EnableTheming="True"></asp:TextBox>
                     </td>
                     <td>&nbsp;</td>
                 </tr>

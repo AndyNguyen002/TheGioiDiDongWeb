@@ -6,7 +6,9 @@
 <head runat="server">
     <link rel="stylesheet" href="LSD.css"/>
     <link rel="stylesheet" href="DangNhapmain.css"/>
-    <title></title>
+    
+    <link rel="Icon" href="../../Icon/iconWeb.png"/>
+    <title>Đăng nhập</title>
     <style>
         
     </style>

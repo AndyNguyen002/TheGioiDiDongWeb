@@ -24,7 +24,7 @@ namespace TheGioiDiDong2.Web.TrangChu
 
             //get recommend product
            
-            List<Recommend> lst = Dao.DaoRecommend.getAll();
+            List<SanPham> lst = Dao.DaoSanPham.getTop15();
             dtlRecommend.DataSource = lst;
             DataBind();
             //end get recommend product
@@ -63,13 +63,21 @@ namespace TheGioiDiDong2.Web.TrangChu
         }
         protected void bQly_Click(object sender, EventArgs e)
         {
-            if (Session["UserID"] == null)
+            
+            if (Session["UserID"] == null && Session["IDVaiTro"] == null)
             {
                 Response.Redirect("DangNhap.aspx");
             }
-            else
+            else if ((int)Session["IDVaiTro"] == 2)
             {
                 Response.Redirect("QuanLySanPham.aspx");
+            }
+            else
+            {
+                Session.Abandon();
+                Session.Clear();
+                Response.Cookies.Clear();
+                Response.Redirect("DangNhap.aspx");
             }
         }
 

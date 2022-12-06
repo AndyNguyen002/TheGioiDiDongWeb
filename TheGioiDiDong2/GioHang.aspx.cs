@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -30,6 +32,14 @@ namespace TheGioiDiDong2
             List<GioHang> list = Dao.DaoGiohang.getAll(uID);
             dtlDetaiBuy.DataSource = list;
             DataBind();
+
+            GioHang tt = Dao.DaoGiohang.TongTien((int)Session["UserID"]);
+            if(tt != null)
+            {
+                BindTongTien();
+            }
+            
+            
         }
         protected void bQly_Click(object sender, EventArgs e)
         {
@@ -42,5 +52,34 @@ namespace TheGioiDiDong2
                 Response.Redirect("QuanLy/QlySanPham.aspx");
             }
         }
+
+        protected void bDatHang_Click(object sender, EventArgs e)
+        {
+            string strSql = "Delete from GioHang where  UserID = " + Session["UserID"];
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+
+            using (SqlConnection sqlConnection = new SqlConnection(strConnection))
+            {
+                SqlCommand cmd = new SqlCommand(strSql, sqlConnection);
+                cmd.CommandType = System.Data.CommandType.Text;
+                sqlConnection.Open();
+                cmd.ExecuteNonQuery();
+                sqlConnection.Close();
+                sqlConnection.Dispose();
+            }
+            
+            Response.Redirect("GioHang.aspx");
+            //Response.Write("<script>alert('Đặt hàng thành công!!') </script>");
+            
+        }
+
+        protected void BindTongTien()
+        {
+            GioHang tt = Dao.DaoGiohang.TongTien((int)Session["UserID"]);
+            TongTien.Text = tt.TongTien;
+        }
+       
+
+        
     }
 }

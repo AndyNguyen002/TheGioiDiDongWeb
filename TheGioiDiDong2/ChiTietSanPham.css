@@ -32,7 +32,7 @@ a{
 
 .Product {
     width: 1200px;
-    height: 2000px;
+    height: 1000px;
     /* background-color: aquamarine; */
     display: flex;
     flex-direction: row;
@@ -40,14 +40,14 @@ a{
 
 .infoP {
     width: 690px;
-    height: 2630px;
+    height: 1000px;
     /* background-color: lightgoldenrodyellow; */
     margin-right: 20px;
 }
 
 .specP {
     width: 490px;
-    height: 2000px;
+    height: 1000px;
     /* background-color: lightgreen; */
 }
 

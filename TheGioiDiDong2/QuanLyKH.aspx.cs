@@ -11,19 +11,17 @@ using TheGioiDiDong2.Entity;
 
 namespace TheGioiDiDong2
 {
-    public partial class QLVivoWeek : System.Web.UI.Page
+    public partial class QuanLyKH : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<VivoWeek> lst = Dao.DaoVivoWeek.getAll();
-            GridView1.DataSource = lst;
-            DataBind();
-
+            List<NguoiDung> load = Dao.DaoNguoiDung.getAllKH();
+            GridView1.DataSource = load;
+            GridView1.DataBind();
         }
-
         protected void btnThem_Click(object sender, EventArgs e)
         {
-            Response.Redirect("QuanLy/QLVivoWeekThem.aspx");
+            Response.Redirect("DangKy.aspx");
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -35,7 +33,7 @@ namespace TheGioiDiDong2
             int index = Convert.ToInt32(e.RowIndex);
             int ID = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
 
-            string strSql = "Delete from VivoWeek where  ID = " + ID.ToString();
+            string strSql = "Delete from NguoiDung where  UserID = " + ID.ToString();
             string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
 
             using (SqlConnection sqlConnection = new SqlConnection(strConnection))
@@ -47,28 +45,36 @@ namespace TheGioiDiDong2
                 sqlConnection.Close();
                 sqlConnection.Dispose();
             }
-            Response.Redirect("QLVivoWeek.aspx");
+            Response.Redirect("QuanLyKH.aspx");
         }
         protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
 
         {
 
 
-
+            Response.Redirect("QuanLy/SuaKH.aspx");
         }
 
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             GridView1.PageIndex = e.NewPageIndex;
-            List<VivoWeek> listSV = DaoVivoWeek.getAll();
+            List<NguoiDung> listSV = DaoNguoiDung.getAllKH();
             GridView1.DataSource = listSV;
             GridView1.DataBind();
         }
 
         protected void bSearch_Click(object sender, EventArgs e)
         {
+            
 
+        }
 
+        protected void bLogOut_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Response.Cookies.Clear();
+            Response.Redirect("DangNhap.aspx");
         }
     }
 }

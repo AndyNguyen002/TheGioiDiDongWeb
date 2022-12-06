@@ -27,6 +27,7 @@ namespace TheGioiDiDong2.Web.DangNhap
             {
                 Page.Session["FullName"] = ND.FullName;
                 Page.Session["UserID"] = ND.UserID;
+                Page.Session["IDVaiTro"] = ND.IDVaiTro;
                 Response.Redirect("default.aspx");
             }
         }

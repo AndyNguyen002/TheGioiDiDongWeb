@@ -10,7 +10,7 @@ using TheGioiDiDong2.Entity;
 
 namespace TheGioiDiDong2.QuanLy
 {
-    public partial class QLVivoWeekSua : System.Web.UI.Page
+    public partial class SuaKH : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,40 +20,41 @@ namespace TheGioiDiDong2.QuanLy
                 BindData(Convert.ToString(pID));
 
             }
-
-            //Response.End();
-            tbID.Text = pID.ToString();
             if (Session["UserID"] == null)
             {
-                Response.Redirect("../DangNhap.aspx");
+                Response.Redirect("DangNhap.aspx");
             }
-
         }
         private void BindData(string pID)
         {
 
-            VivoWeek sp = Dao.DaoVivoWeek.getOne(pID);
-            tbGiaBan.Text = Convert.ToString(sp.Giaban);
-            tbTenSP.Text = Convert.ToString(sp.TenSP);
-            //ImageUrl = '<%# "../../SqlLoadimg/" + Eval("Anh") %>'
-            imgpr.ImageUrl = "../IconProduct/vivoWeek/" + Convert.ToString(sp.Anh);
+            NguoiDung sp = Dao.DaoNguoiDung.getOneid(pID);
+            tbUserID.Text = Convert.ToString(sp.UserID);
+            tbTaiKhoan.Text = sp.TaiKhoan;
+            tbMatKhau.Text = sp.MatKhau;
+            tbFullName.Text = sp.FullName;
+            
+
 
         }
+
         protected void bSua_Click(object sender, EventArgs e)
         {
             string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
                 SqlCommand cmd = new SqlCommand
-                    ("update VivoWeek set TenSP = @TenSP, GiaBan = @GiaBan, Anh= @Anh where ID = @ID", conn);
+                    ("update NguoiDung set TaiKhoan = @TaiKhoan, MatKhau = @MatKhau, FullName= @FullName where UserID = @UserID", conn);
                 conn.Open();
-                cmd.Parameters.AddWithValue("@ID", tbID.Text);
-                cmd.Parameters.AddWithValue("@TenSP", tbTenSP.Text);
-                cmd.Parameters.AddWithValue("@GiaBan", tbGiaBan.Text);
-                cmd.Parameters.AddWithValue("@Anh", UpAnh.FileName);
+                cmd.Parameters.AddWithValue("@UserID", tbUserID.Text);
+                cmd.Parameters.AddWithValue("@TaiKhoan", tbTaiKhoan.Text);
+                cmd.Parameters.AddWithValue("@MatKhau", tbMatKhau.Text);
+                cmd.Parameters.AddWithValue("@FullName", tbFullName.Text);
+                
+
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                Response.Redirect("../QLVivoWeek.aspx");
+                Response.Redirect("../QuanLySanPham.aspx");
             }
         }
     }

@@ -87,6 +87,24 @@ namespace TheGioiDiDong2.QuanLy
         protected global::System.Web.UI.WebControls.Image imgpr;
 
         /// <summary>
+        /// imgpr2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgpr2;
+
+        /// <summary>
+        /// imgpr3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgpr3;
+
+        /// <summary>
         /// Label5 control.
         /// </summary>
         /// <remarks>
@@ -96,13 +114,31 @@ namespace TheGioiDiDong2.QuanLy
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// UpAnh control.
+        /// UpAnh1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload UpAnh;
+        protected global::System.Web.UI.WebControls.FileUpload UpAnh1;
+
+        /// <summary>
+        /// UpAnh2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload UpAnh2;
+
+        /// <summary>
+        /// UpAnh3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload UpAnh3;
 
         /// <summary>
         /// bSua control.

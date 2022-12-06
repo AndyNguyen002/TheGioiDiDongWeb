@@ -45,7 +45,7 @@ namespace TheGioiDiDong2.QuanLy
                 SqlCommand cmd = new SqlCommand
                     ("update BannerSlide set Anh= @Anh where ID = @ID", conn);
                 conn.Open();
-               
+                cmd.Parameters.AddWithValue("@ID", tbID.Text);
                 cmd.Parameters.AddWithValue("@Anh", UpAnh.FileName);
                 cmd.ExecuteNonQuery();
                 conn.Close();

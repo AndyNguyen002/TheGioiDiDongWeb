@@ -34,39 +34,22 @@
             display:flex;
             justify-content:center;
             align-items:center;
-            background-image:url(../Theme/backgrounglogin.jpg);
+            background-color:lightgray;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="Container">
-            <h2 style="text-align:center; color:white">Nhập thông tin sản phẩm <%Response.Write(Session["UserID"]); %></h2>
+            <h2 style="text-align:center; color:black">Chọn ảnh cho Banner Slide mới</h2>
 
             <div>
             <div>
             <table class="auto-style1">
+                
                 <tr>
                     <td class="auto-style2">
-                        <asp:Label ID="Label2" runat="server" Text="Tên sản phẩm: " ForeColor="White"></asp:Label>
-                    </td>
-                    <td class="auto-style3">
-                        <asp:TextBox ID="tbTenSP" runat="server" Width="195px"></asp:TextBox>
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">
-                        <asp:Label ID="Label4" runat="server" Text="Giá bán: " ForeColor="White"></asp:Label>
-                    </td>
-                    <td class="auto-style3">
-                        <asp:TextBox ID="tbGiaBan" runat="server" Width="195px"></asp:TextBox>
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">
-                        <asp:Label ID="Label5" runat="server" Text="Ảnh: " ForeColor="White"></asp:Label>
+                        <asp:Label ID="Label5" runat="server" Text="Ảnh: " ForeColor="black"></asp:Label>
                     </td>
                     <td class="auto-style3">
                         <asp:FileUpload ID="UpAnh" runat="server" />

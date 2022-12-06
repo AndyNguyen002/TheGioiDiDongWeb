@@ -12,5 +12,7 @@ namespace TheGioiDiDong2.Entity
         public int GiaNhap { get; set; }
         public int Giaban { get; set; }
         public string Anh { get; set; }
+        public string AnhPreview1 { get; set; }
+        public string AnhPreview2 { get; set; }
     }
 }
